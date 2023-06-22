@@ -1,6 +1,6 @@
 import React from "react";
 import Sidebar from "../components/Sidebar";
-import Feed from "../components/Feed";
+import Feed from "../components/Publications";
 import Rightbar from "../components/Rightbar";
 import Navbar from "../components/Navbar";
 import {Stack} from "@mui/material";
