@@ -1,6 +1,6 @@
 import React from "react";
 import Sidebar from "../components/Sidebar";
-import Feed from "../components/Publications";
+import Posts from "../components/Posts";
 import Rightbar from "../components/Rightbar";
 import Navbar from "../components/Navbar";
 import {Stack} from "@mui/material";
@@ -12,7 +12,7 @@ import {Stack} from "@mui/material";
         <Navbar/>
         <Stack direction="row" spacing={2} justifyContent="space-between">
         <Sidebar/>
-        <Feed/>
+        <Posts/>
         <Rightbar/>
         </Stack>
       </div>

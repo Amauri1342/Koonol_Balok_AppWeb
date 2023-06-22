@@ -7,7 +7,6 @@ import {
   IconButton,
   Badge,
   Avatar,
-  Typography,
   Menu,
   MenuItem,
   Button,
@@ -15,6 +14,8 @@ import {
 import SearchIcon from "@mui/icons-material/Search";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import NotificationsIcon from "@mui/icons-material/Notifications";
+import ChatIcon from '@mui/icons-material/Chat';
+import ExpandCircleDownIcon from '@mui/icons-material/ExpandCircleDown';
 import React, { useState } from "react";
 import Logo from "../images/Logo.png";
 import Logo_responsive from "../images/Logo_KB.png";
@@ -33,7 +34,8 @@ const StyleToolBar = styled(Toolbar)({
 
 const LogoImage = styled("img")({
   height: 40,
-  marginRight: 10,
+  marginRight: 30,
+  marginLeft:10,
 });
 
 const Search = styled("div")(({ theme }) => ({
@@ -79,7 +81,7 @@ const IconsCustom = styled(Box)(({ theme }) => ({
   display: "none",
   gap: "15px",
   alignItems: "center",
-  [theme.breakpoints.up("sm")]: {
+  [theme.breakpoints.up("md")]: {
     display: "flex",
   },
 }));
@@ -88,7 +90,7 @@ const Userbox = styled(Box)(({ theme }) => ({
   display: "flex",
   gap: "10px",
   alignItems: "center",
-  [theme.breakpoints.up("sm")]: {
+  [theme.breakpoints.up("md")]: {
     display: "none",
   },
 }));
@@ -121,31 +123,28 @@ function Navbar() {
         </Search>
         <IconsCustom>
           <IconButton style={{ color: "white" }}>
-            <Badge badgeContent={4} color="error">
+            <Badge badgeContent={5} color="error">
               <ShoppingCartIcon />
             </Badge>
           </IconButton>
           <IconButton style={{ color: "white" }}>
-            <Badge badgeContent={4} color="error">
+            <Badge badgeContent={20} color="error">
+              <ChatIcon />
+            </Badge>
+          </IconButton>
+          <IconButton style={{ color: "white" }}>
+            <Badge badgeContent={12} color="error">
               <NotificationsIcon />
             </Badge>
           </IconButton>
           <Button onClick={(e) => setOpen(true)}>
             <Avatar sx={{ width: 40, height: 40 }} src={User} />
-            <Typography
-              variant="span"
-              color={"white"}
-              margin={"8px"}
-              style={{ textTransform: "none" }}
-            >
-              {" "}
-              Amauri
-            </Typography>
+            <ExpandCircleDownIcon sx={{ position: "absolute", bottom: 2, right: 5, color:"white" }} />
           </Button>
         </IconsCustom>
         <Userbox onClick={(e) => setOpen(true)}>
           <Avatar sx={{ width: 40, height: 40 }} src={User} />
-          <Typography variant="span"> Amauri</Typography>
+          <ExpandCircleDownIcon sx={{ position: "absolute", bottom: 4, right: 12, color:"white"}} />
         </Userbox>
       </StyleToolBar>
       <Menu
