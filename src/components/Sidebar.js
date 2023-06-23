@@ -20,7 +20,7 @@ import User from "../images/Nezuko.png";
 
 function Sidebar() {
   return (
-    <Box flex={2} p={2} sx={{ display: { xs: "none", sm:"none", md:"block"} }}>
+    <Box flex={1.5} p={2} sx={{ display: { xs: "none", sm:"none", md:"block"} }}>
       <Box position="fixed" >
         <List>
           <ListItem disablePadding>

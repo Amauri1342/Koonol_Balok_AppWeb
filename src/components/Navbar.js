@@ -36,6 +36,7 @@ const LogoImage = styled("img")({
   height: 40,
   marginRight: 30,
   marginLeft:10,
+  
 });
 
 const Search = styled("div")(({ theme }) => ({
@@ -103,12 +104,12 @@ function Navbar() {
         <Box display="flex" alignItems="center">
           <LogoImage
             src={Logo_responsive}
-            alt=""
+            alt="Koonol Balok"
             sx={{ display: { xl: "none", lg: "none", md: "none", sm: "none" } }}
           />
           <LogoImage
             src={Logo}
-            alt="Logo"
+            alt="Koonol Balok Logo"
             sx={{ display: { xs: "none", sm: "block" } }}
           />
         </Box>
