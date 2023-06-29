@@ -17,6 +17,8 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 import ChatIcon from '@mui/icons-material/Chat';
 import ExpandCircleDownIcon from '@mui/icons-material/ExpandCircleDown';
 import React, { useState } from "react";
+import { useLocation } from "react-router-dom"; // Importa useLocation
+
 import Logo from "../images/Logo.png";
 import Logo_responsive from "../images/Logo_KB.png";
 import User from "../images/Nezuko.png";
@@ -98,6 +100,16 @@ const Userbox = styled(Box)(({ theme }) => ({
 
 function Navbar() {
   const [open, setOpen] = useState(false);
+  const location = useLocation(); // Obtiene la ubicación actual
+
+  // Verifica si la ubicación actual es la ruta de inicio de sesión
+  const isLoginPage = location.pathname === "/";
+
+  // No mostrar el Navbar en la página de inicio de sesión
+  if (isLoginPage) {
+    return null;
+  }
+
   return (
     <StyledAppBar position="sticky">
       <StyleToolBar>

@@ -24,7 +24,7 @@ function Sidebar() {
       <Box position="fixed" >
         <List>
           <ListItem disablePadding>
-            <ListItemButton component="a" href="/">
+            <ListItemButton component="a" href="/Home">
               <ListItemIcon>
                 <HomeIcon />
               </ListItemIcon>
@@ -32,7 +32,7 @@ function Sidebar() {
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton component="a" href="/">
+            <ListItemButton component="a" href="/Home">
               <Avatar
                 style={{ width: 30, height: 30, marginRight: "25px" }}
                 alt="RemySharp"
