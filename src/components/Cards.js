@@ -17,7 +17,8 @@ import ShareIcon from "@mui/icons-material/Share";
 
 const Publications = () => {
   return (
-    <Card sx={{marginBottom:"15px"}}>
+    <Card sx={{marginBottom:"15px"}} data-aos="fade-up"
+    data-aos-duration="1000">
       <CardHeader
         avatar={
           <Avatar
